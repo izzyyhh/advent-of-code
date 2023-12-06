@@ -53,19 +53,50 @@ func Part2() {
 	scanner := bufio.NewScanner(file)
 	lines := []string{}
 	cardCount := map[int]int{}
-
-	gameId := 1
+	ans := 0
 
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
-
-		cardCount[gameId] = 1
-		gameId++
 	}
 
-	for _, line := range lines {
-		// do the same but get gameid, and iterate over matches and ++ the value in map
-		// at the end accumulate the map
-		fmt.Println(line)
+	for i, line := range lines {
+		winning, drawn, _ := strings.Cut(line, "|")
+		indexColon := strings.Index(winning, ":")
+		winning = winning[indexColon+2:]
+		cardCount[i] += 1
+
+		winningSlice := strings.Split(winning, " ")
+		drawnSlice := strings.Split(drawn, " ")
+
+		winningSlice = slices.DeleteFunc(winningSlice, func(s string) bool {
+			return s == " " || s == ""
+		})
+
+		drawnSlice = slices.DeleteFunc(drawnSlice, func(s string) bool {
+			return s == " " || s == ""
+		})
+		drawnMap := make(map[string]bool)
+
+		for _, val := range drawnSlice {
+			drawnMap[val] = true
+		}
+		matches := 0
+
+		for _, winningNum := range winningSlice {
+			if drawnMap[winningNum] {
+				matches++
+			}
+		}
+		if matches != 0 {
+			for m := 0; m < matches; m++ {
+				cardCount[i+1+m] += cardCount[i]
+			}
+		}
 	}
+	fmt.Println(cardCount)
+	for _, cardN := range cardCount {
+		ans += cardN
+	}
+
+	fmt.Println(ans)
 }
