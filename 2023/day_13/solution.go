@@ -126,7 +126,6 @@ func hasSingleSmudge(grid [][]string, colPair [2]int) bool {
 
 	for rowi := range grid {
 		for i, j := colPair[0], colPair[1]; i >= 0 && j < len(grid[rowi]); i, j = i-1, j+1 {
-			fmt.Println(colPair, grid[rowi][i], grid[rowi][j])
 			if grid[rowi][i] != grid[rowi][j] {
 				smudges += 1
 			}

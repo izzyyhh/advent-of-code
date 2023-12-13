@@ -5,6 +5,7 @@ import (
 
 	day1 "github.com/izzyyhh/advent-of-code/2023/day_1"
 	day11 "github.com/izzyyhh/advent-of-code/2023/day_11"
+	day12 "github.com/izzyyhh/advent-of-code/2023/day_12"
 	day13 "github.com/izzyyhh/advent-of-code/2023/day_13"
 	day2 "github.com/izzyyhh/advent-of-code/2023/day_2"
 	day4 "github.com/izzyyhh/advent-of-code/2023/day_4"
@@ -42,6 +43,9 @@ func main() {
 	fmt.Println("--- Day11 ---")
 	day11.Part1()
 	day11.Part2()
+
+	fmt.Println("--- Day12 ---")
+	day12.Part1()
 
 	fmt.Println("--- Day13 ---")
 	day13.Part1()
