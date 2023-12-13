@@ -72,6 +72,43 @@ func Part1() {
 	fmt.Println(ans)
 }
 
+func Part2() {
+	file, _ := os.Open("./day_13/input.txt")
+	defer file.Close()
+
+	inputBytes, _ := io.ReadAll(file)
+	input := string(inputBytes)
+	ans := 0
+	blocks := strings.Split(input, "\n\n")
+
+	for _, block := range blocks {
+		grid := makeGridFromBlockString(block)
+		found := false
+
+		for coli := 0; coli < len(grid[0])-1; coli++ {
+			if hasSingleSmudge(grid, [2]int{coli, coli + 1}) {
+				ans += coli + 1
+				found = true
+				break
+			}
+		}
+
+		if found {
+			continue
+		}
+
+		flippedGrid := flipGrid(grid)
+
+		for coli := 0; coli < len(flippedGrid[0])-1; coli++ {
+			if hasSingleSmudge(flippedGrid, [2]int{coli, coli + 1}) {
+				ans += (coli + 1) * 100
+				break
+			}
+		}
+	}
+	fmt.Println(ans)
+}
+
 func checkReflectionRows(grid [][]string, reflectionCandidates [2]int) bool {
 	for rowi := range grid {
 		for i, j := reflectionCandidates[0], reflectionCandidates[1]; i >= 0 && j < len(grid[rowi]); i, j = i-1, j+1 {
@@ -82,6 +119,24 @@ func checkReflectionRows(grid [][]string, reflectionCandidates [2]int) bool {
 	}
 
 	return true
+}
+
+func hasSingleSmudge(grid [][]string, colPair [2]int) bool {
+	smudges := 0
+
+	for rowi := range grid {
+		for i, j := colPair[0], colPair[1]; i >= 0 && j < len(grid[rowi]); i, j = i-1, j+1 {
+			fmt.Println(colPair, grid[rowi][i], grid[rowi][j])
+			if grid[rowi][i] != grid[rowi][j] {
+				smudges += 1
+			}
+			if smudges > 1 {
+				return false
+			}
+		}
+	}
+
+	return smudges == 1
 }
 
 func makeGridFromBlockString(block string) [][]string {
