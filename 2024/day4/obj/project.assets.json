@@ -1,36 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net9.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net9.0": []
   },
   "packageFolders": {
-    "/Users/izzy/.nuget/packages/": {}
+    "C:\\Users\\Izzy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/izzy/advent-of-code/2024/day4/day4.csproj",
+      "projectUniqueName": "C:\\Users\\Izzy\\advent-of-code\\2024\\day4\\day4.csproj",
       "projectName": "day4",
-      "projectPath": "/Users/izzy/advent-of-code/2024/day4/day4.csproj",
-      "packagesPath": "/Users/izzy/.nuget/packages/",
-      "outputPath": "/Users/izzy/advent-of-code/2024/day4/obj/",
+      "projectPath": "C:\\Users\\Izzy\\advent-of-code\\2024\\day4\\day4.csproj",
+      "packagesPath": "C:\\Users\\Izzy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Izzy\\advent-of-code\\2024\\day4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/izzy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Izzy\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net9.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -38,11 +38,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -59,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

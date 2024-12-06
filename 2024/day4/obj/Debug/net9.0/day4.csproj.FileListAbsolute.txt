@@ -1,0 +1,15 @@
+C:\Users\Izzy\advent-of-code\2024\day4\bin\Debug\net9.0\day4.exe
+C:\Users\Izzy\advent-of-code\2024\day4\bin\Debug\net9.0\day4.deps.json
+C:\Users\Izzy\advent-of-code\2024\day4\bin\Debug\net9.0\day4.runtimeconfig.json
+C:\Users\Izzy\advent-of-code\2024\day4\bin\Debug\net9.0\day4.dll
+C:\Users\Izzy\advent-of-code\2024\day4\bin\Debug\net9.0\day4.pdb
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.AssemblyInfoInputs.cache
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.AssemblyInfo.cs
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.csproj.CoreCompileInputs.cache
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.sourcelink.json
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.dll
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\refint\day4.dll
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.pdb
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\day4.genruntimeconfig.cache
+C:\Users\Izzy\advent-of-code\2024\day4\obj\Debug\net9.0\ref\day4.dll
